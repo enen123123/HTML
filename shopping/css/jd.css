@@ -1,0 +1,195 @@
+.nav{
+	
+	height: 40px;
+	background-color: beige;
+}
+.warp,.search{
+	width: 1000px;
+	margin: 0px auto;
+	
+}
+.nav_warp_ul{
+	float: left;
+}
+.nav_warp_ul li{
+	float: left;
+	line-height: 40px;
+	margin-right: 25px;
+}
+/* 两者共用一个 */
+.nav_warp_ul a,.nav_warp_ul_1 span,.nav_warp_ul_1 a{
+	color: darkgrey;
+}
+.nav_warp_ul_1{
+	float: right;
+	
+}
+.nav_warp_ul_1 li{
+	float: left;
+	line-height: 40px;
+	
+}
+.nav a:hover{
+	color: crimson;
+}
+.search span{
+	float: left;
+	margin: 20px;
+	/* 清楚以前的样式 */
+	/* clear: both; */
+}
+.search_div1{
+	margin: 30px;
+	float: right;
+}
+.search_div1_text{
+	
+	width: 200px;
+	height: 20px;
+	border: 2px solid coral;
+	position: relative;
+	top: -1px;
+	left: 5px;
+}
+.search_div1_button{
+	left: 2px;
+	width: 40px;
+	height: 26px;
+	background-color: coral;
+	border: 1px dotted deeppink;
+}
+.title{
+	margin-top: 100px;
+	
+}
+.title h3{
+	float: left;
+	font-size: 20px;
+	color: crimson;
+}
+.title div{
+	float: right;
+	color: darkgrey;
+	
+}
+.tips{
+	
+	height: 40px;
+	background-color: aliceblue;
+	margin-top: 127px;
+	border: 1px solid azure;
+}
+.tips ul{
+	float: left;
+}
+.tips li{
+	line-height: 40px;
+	float: left;
+	font-size: 12px;
+	color: darkgrey;
+}
+.tips li:nth-child(1){
+	border-top: 2px solid crimson;
+	width: 80px;
+}
+.tips li:nth-child(2){
+	width: 200px;
+}
+.tips li:nth-child(3){
+	width: 100px;
+	margin-left: 300px;
+}
+.tips li:nth-child(4){
+	width: 100px;
+}
+.tips li:nth-child(5){
+	width: 100px;
+}
+.tips li:nth-child(6){
+	width: 100px;
+}
+.info{
+	height: 130px;
+	background-color: bisque;
+	border: 1px solid ;
+	margin-top: 30px;
+}
+.info li{
+	float: left;
+	margin-top:  15px;;
+}
+.info_li1{
+	margin-left: 18px;
+	
+}
+.info_li2{
+	margin-left: 9px;
+}
+.info_li3{
+	margin-left: 18px;
+	width: 100px;
+}
+.info_li4{
+	margin-left: 50px;
+	width: 80px;
+}
+.info_li5{
+	margin-left: 200px;
+	width: 50px;
+}
+.info_li6{
+	margin-left: 35px;
+	width: 100px;
+	
+}
+.info_li6 input{
+	
+	width: 15px;
+	height: 11px;
+	position: relative;
+	top: -2px;
+}
+.info_li6 button{
+	width: 20px;
+	height: 17px;
+}
+.info_li7{
+	margin-left: 18px;
+	width: 50px;
+}
+.info_li8{
+	margin-left: 38px;
+}
+.balance{
+	margin-top: 30px;
+	height: 50px;
+	border: 1px solid;
+}
+.balance_ul1{
+	float: left;
+}
+.balance li{
+	float: left;
+	line-height: 50px;
+	margin-left: 15px;
+	margin-right: 10px;
+}
+.balance_ul2{
+	float: right;
+}
+.balance_ul2 button{
+	width: 100px;
+	height: 51px;
+	color: azure;
+	font-size: 20px;
+	font-weight: bold;
+	background-color: crimson;
+	border: 1px solid crimson;
+	position: relative;
+	top: -1px;
+}
+.balance_ul2 span{
+	color:crimson ;
+	font-size: 20px;
+	font-weight: bold;
+}

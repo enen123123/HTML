@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			div{
+				width: 200px;
+				height: 200px;
+				color: chocolate;
+			}
+		</style>
+		<script src="js/jquery-1.12.4.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				// // ul->li->第一行
+				// // $('ul li:first').css('background-color','greenyellow');
+				// $('ul li').first().css('background-color','greenyellow');
+				
+				// // ul->li->最后一行
+				// $('ul li:last').css('background-color','greenyellow');
+				// // $('ul li').last().css('background-color','greenyellow');
+				
+				// // 奇偶行
+				// $('ul li:odd').css('background-color','seagreen');
+				// $('ul li:even').css('background-color','skyblue');
+				
+				// // eq	获得索引下标等于、大于、小于3的索引
+				// $('ul li:eq(3)').css('background-color','greenyellow');
+				// $('ul li:gt(3)').css('background-color','greenyellow');
+				// $('ul li:lt(3)').css('background-color','greenyellow');
+				
+				// 子选择器	第二行、2n行相当于odd、首、尾、只有一个元素的
+				// $('ul li:nth-child(2)').css('background-color','greenyellow');
+				// $('ul li:nth-child(2n)').css('background-color','greenyellow');
+				// $('ul li:first-child()').css('background-color','greenyellow');
+				// $('ul li:last-child()').css('background-color','greenyellow');
+				// $('ul li:only-child()').css('background-color','greenyellow');
+				
+				// 空选择器
+				$('li:empty').css('background-color','greenyellow');
+			})
+		</script>
+		
+	</head>
+	<body>
+		
+		<div id="div1">
+			<ul>
+				<li>list item1</li>
+				<li>list item2</li>
+				<li>list item3</li>
+				<li>list item4</li>
+				
+			</ul>
+			<ul>
+				<li>list item11</li>
+				<li>list item22</li>
+				<li>list item33</li>
+				<li>list item44</li>
+			</ul>
+			<ul>
+				<li>list item111</li>
+				<li></li>
+				<li>list item333</li>
+				<li></li>
+			</ul>
+		</div>
+		
+		
+	</body>
+</html>

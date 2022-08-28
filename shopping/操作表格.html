@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>JQuery操作表格</title>
+		<style type="text/css">
+			tr{
+				height: 40px;
+			}
+		</style>
+		<script src="js/jquery-1.12.4.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/book.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<h3>JQuery操作表格</h3>
+		<hr>
+		<input type="button" id="fx" value="反选">
+		<input type="button" id="addrow" value="新增一行">
+		<input type="button" id="delrow" value="删除行">
+		<input type="button" id="copyrow" value="复制行">
+		<table border="1px" cellspacing="10px" cellpadding="0px" id="ta">
+			
+			<tr>
+				<td width='50px'><input type="checkbox" name="che" id="che" value="1"></td>
+				<td width='200px'>书名</td>
+				<td width='200px'>作者</td>
+				<td width='200px'>数量</td>
+				<td width='200px'>操作</td>
+			</tr>
+			<tr id="">
+				<td><input type="checkbox" name="che1" id="che1" value="" ></td>
+				<td>python编程之道</td>
+				<td>wollo</td>
+				<td>10</td>
+				<td>
+					<input type="button" name="bu1" value="修改数量" onclick="change(this)">
+					<input type="button" name="bu2" value="删除" onclick="del(this)">
+				</td>
+			</tr>
+			<tr id="">
+				<td><input type="checkbox" name="che1" id="" value=""></td>
+				<td>虚拟机使用</td>
+				<td>tom</td>
+				<td>17</td>
+				<td>
+					<input type="button" name="bu1" value="修改数量" onclick="change(this)">
+					<input type="button" name="bu2" value="删除" onclick="del(this)">
+				</td>
+			</tr>
+			<tr id="">
+				<td><input type="checkbox" name="che1" id="che2" value=""></td>
+				<td>c编程之道</td>
+				<td>赵老师</td>
+				<td>13</td>
+				<td>
+					
+					<input type="button" name="bu1" value="修改数量" onclick="change(this)">
+					<input type="button" name="bu2" value="删除" onclick="del(this)">
+				</td>
+			</tr>
+			<tr id="">
+				<td><input type="checkbox" name="che1" id="" value=""></td>
+				<td>web开发</td>
+				<td>张老师</td>
+				<td>21</td>
+				<td>
+					<input type="button" name="bu1" value="修改数量" onclick="change(this)">
+					<input type="button" name="bu2" value="删除" onclick="del(this)">
+				</td>
+			</tr>
+		</table>
+		
+	</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		
+		<style type="text/css">
+			.datalist{
+				border: 1px solid #007108;
+				font-family:Arial;
+				border-collapse:collapse;
+				background-color:#d9ffd4;
+				font size:14px;
+			}
+			
+			.datalist th{
+				border: 1px solid #007108;
+				background-color:#00a40c;
+				color: aqua;
+				font-weight: bold;
+				padding-top: 4px;
+				padding-bottom:4px;
+				padding left: 12px; 
+				padding right: 12px;
+				text-align:center;
+			}
+			
+			.datalist td{
+				border: 1px solid #007108;
+				text-align:left;
+				padding-top: 4px;
+				padding-bottom:4px;
+				padding left: 10px;
+				padding-right:1Opx;
+		
+			}
+			
+		</style>
+		<!-- js实现 -->
+		<!-- 
+		<script type="text/javascript">
+			// 直接加载，js实现隔行变色
+			window.onload=function(){
+				// 获得tr
+				var tr=document.getElementsByTagName('tr')
+				for(var i=0;i<tr.length;i++){
+					if(i%2==0){
+						tr[i].style.backgroundColor='red';
+						
+					}
+					else{
+						tr[i].style.backgroundColor='green';
+						
+					}
+				}
+				
+			}
+		</script> 
+		-->
+		<!-- jQuery实现 -->
+		<script src="js/jquery-1.12.4.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){	//window.onload=function()
+				$('tr:odd').css('background-color','red');
+				// $('tr:odd')调用选择器
+			})
+		</script>
+		
+		
+		<script>
+			//页面直接加载任务的方法
+			// //不可以同时，会冲突
+			// window.onload=function(){
+			// 	alert('123');
+			// }
+			// window.onload=function(){
+			// 	alert('456');
+			// }
+			//可以同时，顺序实现
+			$(function(){
+				alert('123');
+			})
+			$(function(){
+				alert('456');
+			})
+			//$等于jQuery
+			jQuery(function(){
+				alert('789');
+			})
+			// 完整形式
+			$(document).ready(function(){
+				alert('000');
+			})
+		</script>
+		
+	</head>
+	<body>
+		<table class="datalist" summary='list' id="otable">
+			<tr>
+				<th scope="col">Name</th>
+				<th scope="col">Class</th>
+				<th scope="col">Birthday</th>
+				<th scope="col">Constellation</th>
+				<th scope="col">Mobile</th>
+			</tr>
+			<tr>
+				<td>isaac</td>
+				<td>W13</td>
+				<td>Jun 24th</td>
+				<td>Cancer</td>
+				<td>1118159</td>
+			</tr>
+			<tr class="altrow">
+				<td>fresheggs</td>
+				<td>W610</td>
+				<td>Nnv 5th</td>
+				<td>Scorpio</td>
+				<td>1038818</td>
+			</tr>
+			
+			<tr>
+				<td>girlwing</td>
+				<td>W210</td>
+				<td>Sep 16th</td>
+				<td>Virgo</td>
+				<td>1307994</td>
+			</tr>
+			<tr class="altrow">
+				<td>tastestory</td>
+				<td>W15</td>
+				<td>Nov 29th</td>
+				<td>Sagittarius</td>
+				<td>1095245</td>
+			</tr>
+			<tr>
+				<td>lovehate</td>
+				<td>W47</td>
+				<td>Sep 5th</td>
+				<td>Virgo</td>
+				<td>6098017</td>
+			</tr>
+			<tr class="altrow">
+				<td>slepox</td>
+				<td>W19</td>
+				<td>Nov 18th</td>
+				<td>Sturpiu</td>
+				<td>0658635</td>
+			</tr>
+		
+		</table>
+
+	</body>
+</html>
+

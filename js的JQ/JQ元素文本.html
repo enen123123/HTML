@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		
+		<script src="js/jquery-1.12.4.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				$('#bu1').click(function(){
+					// 获得的元素对象
+					var div=$('#div1');
+					// div里的元素内容，html（innerhtml）		
+					var ht=div.html();
+					// 获得文本内容	text（innertext）
+					var te=div.text();
+					// 获得文本框值	val（value）
+					var val=$('#bu2').val();
+					console.log(ht+'---'+te+'---'+val);
+					
+					// 操作元素内容值
+					// var ht=div.html('<b>12345678</b>');
+					// var te=div.text('<b>87654321</b>');
+					var val=$('#bu2').val('000');
+					
+					// 累加
+					// var tete=div.text(div.text()+'<b>87654321</b>');
+					var val=$('#bu2').val($('#bu2').val()+'999');
+
+					
+					
+				})
+			})
+		</script>
+		
+	</head>
+	<body>
+		<input type="button" value="元素内容" id="bu1">
+		<hr>
+		<div id="div1">
+			<span>春眠不觉晓</span>
+		</div>
+		<input type="button" value="春眠" id="bu2">
+	</body>
+</html>

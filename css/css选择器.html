@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			/* 选择器优先级：id选择器、类选择器、元素选择器、通用选择器 */
+			/* 通用选择器 	*代表页面中的所有元素*/
+			*{color: crimson;}
+			/* 元素选择器 */
+			div{
+				width: 100px;
+				height: 100px;
+				background-color: blue;
+				/* 边框粗细、风格（实线）、颜色 */
+				border: 1px solid red;
+			}
+			/* id选择器 */
+			#top1{
+				background-color: black;
+			}
+			/* 类选择器 */
+			.top2{
+				background-color: cadetblue;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="top2">1</div>
+		<!-- id 命名规则、数字、字母、下中划线组成，不能数字开头 -->
+		<div id="top1">2</div>
+		<div>3</div>
+		<p>你好</p>
+	</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<!-- 
+			1.基础选择器
+			*	id	class	标签
+			2.关系选择器
+			>	+	~
+			3.伪类选择器
+			hover
+			4.伪对象选择器
+			before	after
+			5.伪属性选择器
+			input[text=" "]
+		 -->
+		<style>
+			/*  属性选择器  */
+			input[type=text]{
+				width: 100px;
+				height: 100px;
+			}
+			/* ^开头		$结尾 */
+			input[name^=e]{
+				width: 50px;
+				height: 50px;
+				
+			}
+			input[name$=m]{
+				width: 50px;
+				height: 50px;
+				
+			}
+		</style>
+	</head>
+	<body>
+		
+		<p>
+			账号：<input type="text" name="zh">
+		</p>
+		<p>
+			密码：<input type="password" name="pwd">
+		</p>
+		<p>
+			邮箱：<input type="email" name="ema">
+		</p>
+		<p>
+			号码：<input type="number" name="num">
+		</p>
+	</body>
+</html>

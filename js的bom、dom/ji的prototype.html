@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			
+			// 可类可函数
+			function user(age,sex){
+				// 声明变量
+				this.name='炸';
+				this.age=age;
+				this.sex=sex;
+				// 声明函数
+				this.eat=function(){
+					// 方法体
+					alert('eat!!!');
+				}
+			}
+			
+			function user1 () {
+				this.run=function(){
+					alert('第二个eat!!!');
+				}
+			}
+			// 圆形列，类似于继承，且提前声明
+			user.prototype=new user1();
+			
+			var us=new user('张旭嘎哈');
+			us.look='看玛卡巴卡电影'
+			// js灵活使用对象
+			// alert(us.name+'------'+us.age+'------'+us.sex+'------'+us.look);
+			
+			us.run();
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
