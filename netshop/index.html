@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="js/jquery-1.12.4.min.js" type="text/javascript" charset="utf-8"></script>
+		
+	</head>
+	<body>
+		
+	
+			$(function(){
+				var color_list=$(".colorimg ul li img");
+				
+				color_list.click(function(){
+					// attr()方法获得点击按钮的id
+					var text=$(this).attr("alt");
+					// 将点击过的地方变红
+					
+					$(this).css('border','2px solid orange')
+					// $(this).next('')
+					// $(this).after('1111')//</img>后面
+					// $(this).before('1111')之前
+					// $(this).html('1111')//文本框之前
+					// $(this).prepend('1111')//文本框之前
+					$(this).addClass('1111')
+					
+					//选择不同颜色时，文字跟着变化
+					$(".colors span").html(text);
+					$(this).append('active','')
+					// $(this).empty()
+					// $(this).css('border','0')
+						
+				});
+				color_list.dblclick(function(){
+						// 清空内容
+						$(this).empty()
+						$(this).css('border','0')
+				})
+				
+				// 提取对应属下的列表
+				var size_list=$(".sizetype ul li");
+					
+				size_list.click(function(){
+					var text=$(this).html();
+					// 将点击过的地方变红
+					$(this).css('color','red')
+					//选择不同尺寸时，文字跟着变化
+					$(".size span").html(text);
+				});
+			}); 
+		
+		</script>
+			
+	</body>
+</html>
+
+
+
+
+
+
+
+

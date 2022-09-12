@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		
+		<link rel="stylesheet" type="text/css" href="css/net-shop.css">
+		<link rel="stylesheet" type="text/css" href="css/user-register.css">
+		<script src="js/jquery-1.12.4.min.js" type="text/javascript" charset="utf-8"></script>
+		
+		
+	</head>
+	<body>
+		
+		<div class="head">
+			<ul>
+				<li>
+					<a href="">登录</a>
+				</li>
+				<li>
+					<a href="">免费注册</a>
+				</li>
+				<li>
+					<a href="">我的订单</a>
+				</li>
+				<li>
+					<a href="">客户服务</a>
+				</li>
+				<li>
+					<a href="">我的购物车</a>
+				</li>
+			</ul>
+		</div>
+		
+		<div class="search">
+			<ul>
+				<li>⏰整点开抢⌚</li>
+				<li>🛒买手砍价</li>
+				<li>👓验货质检</li>
+			</ul>
+			<form class="sousuo" method="get" action="/search/">
+			<input type="text" name="q" placeholder="请输入要搜索的宝贝">🔍
+			</form>
+		
+		</div>
+		
+		<div class="register">
+			<br>
+			<div class="reghead">
+				<ul>
+					<li style="font-size: 18px;color: red;">用户登录</li>
+					<li>尊敬的用户，欢迎您回来！！！</li>
+				</ul>
+				
+			</div>
+			
+			<div class="regbody">
+				<div class="regbodyleft">
+					<input type="text" placeholder="请输入账号"><br>
+					<input type="text" placeholder="请输入密码"><br>
+					<input type="text" id="yzm" onblur="yanzhengma()">
+					<span id="yan_s" style="margin-left: 150px;">1</span>
+					<span id="span_yzm"></span>
+					<input type="submit" style="background-color: coral;border: 0;" ><br>
+					
+					
+							
+				</div>
+				<div class="regbodyright">
+					<img src="img/wel.png" alt="">
+				</div>
+			</div>
+		</div>
+		<script>
+			// 随机产生四位验证码js
+			$(function(){
+				var ran=Math.floor(Math.random()*9000+1000);
+				$('#yan_s').text(ran)
+				// var span=document.getElementById('yan_s');
+				// span.innerText=ran;
+			}) 
+			// 验证码 
+			function yanzhengma(){
+				console.log($('#yzm').val())
+				console.log($('#yan_s').text())
+				
+				if($('#yzm').val()==$('#yan_s').text()){
+					$('#span_yzm').text('√')
+				}
+				else{
+					$('#span_yzm').text('×')
+				}
+				// var yzm=document.getElementById('yzm').value;
+				// var span_1=document.getElementById('yan_s').innerText;
+				// var span=document.getElementById('span_yzm');
+				
+				// if(yzm!=span_1){
+				// 	span.innerText='×';
+				// 	span.style.color='red';	
+				// 	return false;
+				// }
+				// else{
+				// 	span.innerHTML='√';
+				// 	span.style.color='green';
+				// 	return true;
+				// }
+				// js写法
+				
+			}
+		
+		</script>
+		
+	</body>
+</html>

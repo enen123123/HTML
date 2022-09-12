@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/net-shop.css">
+		<link rel="stylesheet" type="text/css" href="css/user-register.css">
+		<link rel="stylesheet" type="text/css" href="css/user-address.css">
+		
+	</head>
+	<body>
+		
+		<div class="head">
+			<form action="/cart/" method="post">
+				<!-- {% csrf_token %} -->
+				<input name="colorid" type="hidden">
+				<input name="goodsid" type="hidden" value="{{ goods.id }}">
+				<input name="sizeid" type="hidden">
+				<input name="count" type="hidden">
+				<input name="f1ag" value="add" type="hidden">
+				<input type="submit" class="male" onclick="gocart()"; value="加入购物车">
+			</form>
+
+			<ul>
+				<li>
+					<a href="">登录</a>
+				</li>
+				<li>
+					<a href="">免费注册</a>
+				</li>
+				<li>
+					<a href="">我的订单</a>
+				</li>
+				<li>
+					<a href="">客户服务</a>
+				</li>
+				<li>
+					<a href="">我的购物车</a>
+				</li>
+			</ul>
+		</div>
+		
+		<div class="search">
+			<ul>
+				<li>⏰整点开抢⌚</li>
+				<li>🛒买手砍价</li>
+				<li>👓验货质检</li>
+			</ul>
+			<form class="sousuo" method="get" action="/search/">
+			<input type="text" name="q" placeholder="请输入要搜索的宝贝">🔍
+			</form>
+		
+		</div>
+		
+		<div class="address">
+			
+			<div class="addressbody">
+				<br />
+				<div class="addressbodywel">
+					<a href="">欢迎回来：[enen123123]</a>
+				</div>
+				<div class="addressbodyleft">
+					<img src="img/photo.png" width="100px" style="margin-left: 60px;">
+					<p>[enen123123]</p>
+					<a href="">[退出登录]</a>
+					<hr />
+					<a href="">我的订单</a><br />
+					<a href="">地址管理</a><br />
+					<a href="">返回首页</a><br />
+				</div>
+				<div class="addressbodyright">
+					<div class="addressbodyrighttop">
+						<h3>地址管理：</h3>
+						<div class="addressbodyrighttop1">
+							<p>🙍小叮当📱187****9770</p>
+							<p>📍地址‍️：陕西省渭南市蒲城县</p>
+							<input type="checkbox" >编辑
+							<input type="checkbox" >删除
+							<p></p>
+						</div>
+					</div>
+					<div class="addressbodyrightbottom">
+						<h3>新增地址：</h3>
+						<div class="addressbodyrightbottom1">
+							<table>
+								<tr>
+									<td>收货人</td>
+									<td><input type="text" ></td>
+								</tr><br>
+								<tr>
+									<td>手机号码</td>
+									<td><input type="text" ></td>
+								</tr>
+								<tr>
+									<td>所在地</td>
+									<td>
+										<select name="" id="">
+											<option value="">西安市</option>
+											<option value="">渭南市</option>
+										</select>
+										<select name="" id="">
+											<option value="">西安市</option>
+											<option value="">渭南市</option>
+										</select>
+										<select name="" id="">
+											<option value="">西安市</option>
+											<option value="">渭南市</option>
+										</select>
+									</td>
+								</tr>
+								<tr>
+									<td>详细地址</td>
+									<td><input type="text" style="height: 60px;" placeholder="100字以内详细信息" ></td>
+								</tr>
+
+							</table>
+							<br>
+						</div>
+					</div>
+					
+					
+					
+				</div>
+			</div>
+		</div>
+		
+	</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		
+			<link rel="stylesheet" type="text/css" href="css/net-shop.css">
+			<link rel="stylesheet" type="text/css" href="css/net-datail.css">
+		
+	</head>
+	<body>
+		<div class="head">
+			<ul>
+				<li>
+					<a href="">登录</a>
+				</li>
+				<li>
+					<a href="">免费注册</a>
+				</li>
+				<li>
+					<a href="">我的订单</a>
+				</li>
+				<li>
+					<a href="">客户服务</a>
+				</li>
+				<li>
+					<a href="">我的购物车</a>
+				</li>
+			</ul>
+		</div>
+		
+		<div class="search">
+			<ul>
+				<li>⏰整点开抢⌚</li>
+				<li>🛒买手砍价</li>
+				<li>👓验货质检</li>
+			</ul>
+			<form class="sousuo" method="get" action="/search/">
+			<input type="text" name="q" placeholder="请输入要搜索的宝贝">🔍
+			</form>
+		
+		</div>
+		
+		<div class="detail">
+			<div class="detailhead">
+				<ul>
+					<li active>
+						<a href="">首页</a>
+					</li>
+					<li>></li>
+					<li>
+						<!-- 示例使用着重符号，当id="active"即可强调 -->
+						<a href="" id="active">女装</a>
+					</li>
+					<li>></li>
+					<li>
+						<a href="">短袖T恤男潮流上衣</a>
+					</li>
+					
+				</ul>
+			</div>
+			
+			<div class="detailbody">
+				<div class="detailbodyleft">
+					<img id="active" src="img/10.png" alt="" width="400px" height="500px">
+				</div>
+				<div class="detailbodyright">
+					<div class="line">
+							<li><h3>短袖T恤男潮流上衣</h3></li>
+							<li><h1>现价：￥99.00</h1><h4>(原价：￥199.00)</h4></li>
+					</div>
+					<div class="color">
+						
+						<li style="border: none;"><h4>颜色：</h4></li>
+						<li>
+							<img src="img/10.png" width="40px" height="40px">
+						</li>
+						<li>
+							<img src="img/10.png" width="40px" height="40px">
+						</li>
+						<br>
+					</div>
+					<div class="size">
+						<li style="border: none;padding: 0px;">尺码：</li>
+						<li id="active">s</li>
+						<li>m</li>
+						<li>xl</li>
+						<br>
+					</div>
+					<div class="count">
+						<input type="button" value="-">
+						<input type="text" value="1" class="text">
+						<input type="button" value="＋">
+					</div>
+					<!-- <input type="submit" value="单独购买" class="submit"> -->
+					<form action="/cart/" method="post">
+						<!-- {% csrf_token %} -->
+						<input name="colorid" type="hidden">
+						<input name="goodsid" type="hidden" value="{{ goods.id }}">
+						<input name="sizeid" type="hidden">
+						<input name="count" type="hidden">
+						<input name="f1ag" value="add" type="hidden">
+						<input type="submit" class="submit" onclick="gocart()"; value="加入购物车">
+					</form>
+						
+					
+				</div>
+			</div>
+				
+		</div>				
+		
+		<div class="detailfoot">
+			<div class="show1">
+				<p style="font-size: 25px;font-style:italic ">参数规格<hr></p>
+				
+				<img src="img/10.png" width="400px" height="500px" style="margin-left: 500px;">
+			</div>
+		</div>
+		
+		<div class="goods-model">
+			
+		</div>
+	</body>
+</html>
