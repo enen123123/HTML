@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			// // ()函数执行符号	无参匿名函数
+			// (function(){
+			// 	alert('匿名函数');
+			// })()
+			
+			// // 有参数匿名函数执行
+			// (function(s,ss){
+			// 	alert('匿名函数'+s+'-'+ss);
+			// })(1,2)
+			
+			// // 有参数匿名函数执行		局部变量、更改为全局变量
+			// (function(){
+			// 	var a=22;
+			// 	// 运行时把挂载在window对象
+			// 	window.s=a;
+			// 	alert(a+'---'+s);
+			// })()
+			
+			// 闭包		全局访问局部变量，不易修改
+			function demo1(){
+				var b=2;
+					function test1(){
+						alert(b);
+						var c=6;
+						return c;
+					}
+					var d=test1();
+					alert(d);
+					
+			}
+			demo1();
+		</script>
+	</head>
+	<body>
+		<p>JQuery的封装原理</p>
+		<p>匿名函数的自调用</p>
+		<p>闭包原理</p>
+	</body>
+</html>

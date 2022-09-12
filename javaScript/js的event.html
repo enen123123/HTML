@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			function demo1(){
+				alert('单击事件的执行')
+			}
+			function demo2(){
+				alert('双击事件的执行')
+			}
+			function demo3(){
+				alert('鼠标放在上面的事件')
+			}
+			function demo4(){
+				alert('鼠标离开的事件')
+			}
+			function demo5(){
+				console.log('鼠标移动的事件')
+			}
+			function demo6(){
+				alert('键盘摁下')
+			}
+			function demo7(){
+				alert('键盘弹起')
+			}
+			function demo8(){
+				// alert('获得焦点')
+				// alert('失去焦点')
+				alert('内容改变')
+			}
+			function demo9(){
+				alert('页面加载')
+			}
+		</script>
+	</head >
+	<body onload="demo9()">
+		<!-- 单机事件 -->
+		<input type="button" value="单击操作" onclick="demo1()"><br>
+		<input type="button" value="双击操作" ondblclick="demo2()">
+		<div style="width: 100px;height: 100px;background-color: aqua;" onmouseover="demo3()"></div>
+		<div style="width: 100px;height: 100px;background-color: bisque;" onmouseout="demo4()"></div>
+		<div style="width: 100px;height: 100px;background-color: blueviolet;" onmousemove="demo5()"></div>
+		<input type="text" value="键盘" onkeydown="demo6()"><br>
+		<input type="text" value="键盘" onkeyup="demo7()"><br>
+		<!-- <input type="text" value="焦点" onfocus="demo8()"><br> -->
+		<!-- <input type="text" value="焦点" onblur="demo8()"><br> -->
+		<input type="text" value="改变内容" onchange="demo8()"><br>
+		
+		
+		
+	</body >
+</html>

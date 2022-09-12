@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script >
+			// 直接获得节点
+			function demo1(){
+				//id属性获得 
+				var username=window.document.getElementById("username");
+				alert(username);
+			}
+			function demo2(){
+				//标签名称input获得,可获得多个
+				var inp=window.document.getElementsByTagName("input");
+				alert(inp);
+			}
+			function demo3(){
+				//naem属性获得,可获得多个
+				var nam=window.document.getElementsByName("hobby");
+				alert(nam);
+				alert(nam.length);
+			}
+			
+			// 间接获得
+			function demo4(){
+				//获得父节点
+				var sel=window.document.getElementById("professional");
+				// 获得子节点	空白文档也是节点
+				var chi=sel.childNodes;
+				alert(chi);
+				alert(chi.length);
+			}
+			function demo5(){
+				var p2=window.document.getElementById("p2");
+				// 获得父节点
+				var par=p2.parentNode;
+				console.log(par);
+			}
+			function demo6(){
+				//
+				var p2=window.document.getElementById("p2");
+				// 获得下一个文档（包含无用的空白文档）
+				var next=p2.nextSibling
+				// 获得下一个文档（不包含空白文档）
+				var next1=p2.nextElementSibling
+				console.log(next1);
+				// 获得上一个文档（包含无用的空白文档）
+				var pre=p2.previousSibling
+				// 获得上一个文档（不包含空白文档）
+				var pre1=p2.previousElementSibling
+				console.log(pre1);
+			}
+		</script>
+	</head>
+	<body onload="demo6()">
+		<form action="" id="form1">
+			用户名:	<input type="text" name="username" id="username" value="请输入姓名"><br>
+			密码:	<input type="password" name="pwd" id="pwd"/><br>
+			爱好:	<input type="checkbox" name="hobby" value="music"/>音乐
+					<input type="checkbox"name="hobby" value="sports"/>体育
+					<input type="checkbox" name="hobby" value="art"/>美术
+					<br />
+			职业:<select name=" professional" id="professional">
+					<option value="1">工人</option>
+					<option value="2"id="p2">农民</option>
+					<option value="3">解放军</option>
+					<option value="4">知识分子</option>
+				</select><br>
+				<input type="button" value="提交"/>
+		</form>
+
+	</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="js/jquery-1.12.4.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			// $(function(){
+			// 	// 创建新元素
+			// 	var p=$('<p>飞流直下三千尺#</p>');
+			// 	// 增加子元素，尾部添加	div1和p互相追加
+			// 	// $('#div1').append(p);
+			// 	 // p.appendTo('#div1');
+			// 	// 添加内部子元素	首部添加		div1和p互相追加
+			// 	// $('#div1').prepend(p)
+			// 	// p.prependTo('#div1');
+			// 	// 平级添加，
+			// 	// $('#div1').before(p);//现有元素之前
+			// 	// p.insertBefore('#div1');
+			// 	// $('#div1').after(p);//现有元素之后
+			// 	// p.insertAfter('#div1');
+				
+			// 	// 替换指定节点
+			// 	// $('div p:nth-child(2)').replaceWith(p);
+			// 	// p.replaceAll('div p:nth-child(4)')
+				
+			// 	// 删除
+			// 	// $('#div1').remove()
+			// 	// $('#div1 p:nth-child(3)').remove()
+				
+			// 	// 清空
+			// 	// $('#div1').empty();
+			// 	// $('#div1 p:nth-child(3)').empty();
+				
+			// 	// 
+				
+			// })
+			
+			function insertnode(){
+				var p=$('<p>'+'照片：<input type="file">'+'<input type="button" value="删除" onclick="movenode(this)">'+'</p>');
+				$('#tijiao').before(p);
+				
+			}
+			function movenode(thi){
+					// $(thi)可以直接将js转为JQ
+					$(thi).parent().remove()
+				}
+			
+			
+		</script>
+		
+		<style>
+			#div1{
+				
+				height: 200px;
+				border: 2px solid firebrick;
+			}
+			#div1 p{
+				border: 2px solid gray;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<div id="div1">
+			<p>飞流直下三千尺1</p>
+			<p>飞流直下三千尺2</p>
+			<p>飞流直下三千尺3</p>
+			<p>飞流直下三千尺4</p>
+			<p>飞流直下三千尺5</p>
+		</div>
+		
+		<form action="">
+			<p>
+				用户名：<input type="text">
+			</p>
+			<p>
+				照片：<input type="file">
+				<input type="button" value="添加" onclick="insertnode()">
+			</p>
+			<p id="tijiao">
+				提交：<input type="button" value="提交" >
+				删除：<input type="button" value="删除" onclick="insertnode()">
+			</p>
+		</form>
+	</body>
+</html>

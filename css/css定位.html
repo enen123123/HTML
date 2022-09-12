@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			
+			.div1{
+				width: 100px;
+				height: 100px;
+				background-color: red;
+				
+			}
+			.div2{
+				width: 100px;
+				height: 100px;
+				background-color: blue;
+				/* 绝对定位	释放以前的位置 */
+				position: absolute;
+				top:100px;
+				left:100px;
+				/* 层数：-1层 */
+				z-index: -1;
+			}
+			.div3{
+				width: 100px;
+				height: 100px;
+				background-color: black;
+				/* 相对定位 	不释放*/
+				position: relative;
+				top: 100px;
+				left: 100px;
+			}
+			.div4{
+				width: 100px;
+				height: 100px;
+				background-color: green;
+				/* 固定定位 	悬浮广告*/
+				position:fixed;
+				top: 120px;
+				left: 120px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="div1">
+			
+		</div>
+		<div class="div2">
+			
+		</div>
+		<div class="div3">
+			
+		</div>
+		<div class="div4">
+			
+		</div>
+		<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+	</body>
+</html>

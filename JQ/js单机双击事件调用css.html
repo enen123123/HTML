@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="js/jquery-1.12.4.min.js" type="text/javascript" charset="utf-8"></script>
+		
+	</head>
+	<body>
+		
+		<!-- id和class都是html标签的属性，基本上所有html标签都可以定义这两个属性。 -->
+		<!-- id是标签的名称，而class则是具有同一特征的标签的集合。 -->
+		<!-- id具有唯一性，同一id整个页面只允许有一个标签拥有， -->
+		<!-- class则可以定义给随意的一个或者多个标签，同一标签也可以定义多个class。 -->
+		
+		<div class="colors">
+			<strong>颜色：</strong> <span> 蓝白</span>
+		</div>
+		<div class="colorimg">
+		<ul>
+				<li><img src="img/10.png" alt="蓝白" style="height: 50px;"/></li>
+				<li><img src="img/10.png" alt="黄白" style="height: 50px;" /></li>
+				<li><img src="img/10.png" alt="绿白" style="height: 50px;" /></li>
+			  </ul>
+		</div><!--选择不同颜色-->
+				   
+		<div class="size">
+			<strong>尺寸：</strong> <span> 未选择 </span>
+		</div>
+		<div class="sizetype">
+			<ul>
+				<li>S</li>
+				<li>L</li>
+				<li>SL</li>
+				<li>LL</li>
+			</ul>
+		</div><!--选择不同尺寸-->
+		
+		<div class="inp">
+			<strong>输入框：</strong> <span> 未选择 </span>
+		</div>
+		<div class="inputtype">
+			<ul>
+				<li><input type="text"></li>
+				<li><input type="text"></li>
+				<li><input type="text"></li>
+			</ul>
+		</div><!--选择不同输入框-->
+		
+		<script>
+			// 页面中将数据直接提交
+			$(function(){
+				// 获取属性下的其他类型
+				var color_list=$(".colorimg ul li img");
+				// 单机增加边框
+				color_list.click(function(){
+					// attr()方法获得点击按钮的id
+					var text=$(this).attr("alt");
+					// 将点击过的地方变红
+					$(this).css('border','2px solid orange')
+					$(this).addClass('active')//增加类属性class
+					$(this).removeClass('active')//去除类class
+					// $(this).next('')
+					// $(this).after('1111')//</img>后面
+					// $(this).before('1111')之前
+					// $(this).html('1111')//文本框之前
+					// $(this).prepend('1111')//文本框之前
+					
+					// $(this).addClass('1111')//增加类属性class
+					// $(this).removeClass('1111')//去除类class
+					
+					//选择不同颜色时，文字跟着变化
+					// $(".colors span").html(text);
+					
+					// 增加一个active的属性
+					// $(this).append('active','')
+					// 使文本框内容为空
+					// $(this).empty()
+					// 设置样式边框为0
+					// $(this).css('border','0')
+						
+				});
+				// 双击取消边框
+				color_list.dblclick(function(){
+						// 清空内容
+						// $(this).empty()
+						$(this).css('border','0')
+				})
+				
+				// 提取对应属下的列表
+				var size_list=$(".sizetype ul li");
+					
+				size_list.click(function(){
+					var text=$(this).html();
+					// 将点击过的地方变红
+					$(this).css('color','red')
+					//选择不同尺寸时，文字跟着变化
+					$(".size span").html(text);
+				});
+				
+				// // 通过获取li\input两个判断出焦点和点击的适用范围
+				// var li_list=$(".inputtype ul li ");
+				// var input_list=$(".inputtype ul li input");
+				// li_list.blur(function(){
+				// 		// 清空css样式style
+				// 		$(li_list).removeAttr('style')
+						
+						
+				// })
+				// li_list.click(function(){
+						// 清空内容
+						// li_list 获取提前定义下的所有属性列表
+						// $(li_list).removeAttr('style')
+						// this 获取被点击下的指定属性
+						// $(this).empty()
+						// $(this).css('border','4px solid green')	
+				// })
+				
+				var li_list=$(".inputtype ul li ");
+				li_list.click(function(){
+					// 当点击后清空指定列表的所有css样式
+					$(li_list).removeAttr('style')
+					// 在对点击的某一项进行样式的设置
+					$(this).css('border','4px solid green')
+					// 最终实现在点击下，只切换指定的范围内的某一个样式
+				})
+				
+				
+				// 焦点，失去焦点，单机，双击		前面两个不适用于列表,图片
+				// focus,blur,click,dbclick
+				// li只对点击有效
+				// input可以对点击、焦点都有效
+				// 百度得到：无法触发focus与blur事件，猜测span，a等标签也无法触发焦点事件(input:button，及button标签可以触发)
+			
+			})
+		</script>
+			
+	</body>
+</html>
+
+
+
+
+<!-- https://www.cnblogs.com/wx1993/p/4806873.html 
+html方法，给元素添加html代码或者清空html代码（参数为空字符串）；
+append向元素的末尾添加html代码；
+appendTo这个方法跟append方法的很像，只是要添加的html代码的目标有所不一样；
+after向元素的后边添加html代码，如果元素后面有元素了，那将后面的元素后移，然后将html代码插入；
+before向元素的前边添加html代码，如果元素前面有元素了，那将前面的元素前移，然后将html代码插入；
+insertAfter将JQuery封装好的元素插入到指定元素的后面，如果元素后面有元素了，那将后面的元素后移，然后将JQuery对象插入；
+insertBefore将JQuery封装好的元素插入到指定元素的前面，如果元素前面有元素了，那将前面的元素前移，然后将JQuery对象插入；
+empty清空元素内部的html代码，它只是清空内部的html代码，但是标记仍然留在DOM中；
+remove从DOM中移除整个元素。 -->
+
+
+

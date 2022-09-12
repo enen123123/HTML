@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<!--  -->
+		<script>
+			// window会默认自带，可以不写
+			// 三种弹框
+			// 1.alert
+			function demo1(){
+				window.alert('弹窗一');
+			}
+			
+			// 2.confirm 带返回值
+			function demo2(){
+				var flag=window.confirm('弹窗二');
+				alert(flag);
+			}
+			// 3.prompt 返回弹框内容
+			function demo3(){
+				var flag1=window.prompt('弹窗三','示例');
+				alert(flag1);
+			}
+			// 定时器
+			function gettime(){
+				var date=new Date();
+				// 获得时间
+				var time=date.toLocaleString();
+				// 获得id为span1的对象
+				var span=document.getElementById('span1');
+				//将获取的对象放入指定位置
+				span.innerHTML=time;
+				
+			}
+			function stoptime(){
+				window.clearInterval(time1);
+			}
+			function starttime(){
+				//每1s调用一次gettime方法
+				time1=window.setInterval('gettime()',1000);
+				//2s后调用一次方法
+				// window.setTimeout('gettime()',2000);
+			}
+			
+			//关闭打开网页
+			function openweb(){
+				window.open('http://www.baidu.com')
+			}
+			function closeweb(){
+				window.close('http://www.baidu.com')
+			}
+		</script>
+	</head>
+	<body onload="gettime()">
+		<p><input type="button" value="弹框A" onclick="demo1()"><br></p>
+		<p><input type="button" value="弹框B" onclick="demo2()"><br></p>
+		<p><input type="button" value="弹框C" onclick="demo3()"><br></p>
+		
+		<p>
+			当前时间：<span id='span1'></span>
+			<input type="button" value="开始计时" onclick="starttime()">
+			<input type="button" value="停止时间" onclick="stoptime()">
+		</p>
+		<p>
+			<input type="button" value="打开baidu网页" onclick="openweb()">
+			<input type="button" value="关闭当前网页" onclick="closeweb()">
+		</p>
+		
+		
+		
+	</body>
+</html>

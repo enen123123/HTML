@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			body{
+				background-image: url(img/caster.webp);
+				
+				background-repeat: no-repeat;
+				
+				background-size: 1600px 800px;
+				
+			}
+			#a1{
+				font-size: 20px;
+				color: blue;
+			}
+			.click{
+				width: 300px;
+				height: 180px;
+				background-color: beige;
+				text-align: center;
+			}
+			.click input{
+				margin-top: 20px;
+				width: 50px;
+				height: 30px;
+			}
+		</style>
+		<script>
+			var i=0;
+			function changebj(){
+				var arr=['caster.webp','apple.webp','2.jpg','3.18.png','5.jpg'];
+				
+				document.body.style.backgroundImage='url(img/'+arr[i]+')'
+				
+				if(i<arr.length-1){
+					document.body.style.backgroundImage='url(img/'+arr[i]+')'
+					i++;
+				}
+				else{
+					i=0;
+				}
+			}
+			function move_no(){
+				var cli=document.getElementById('click');
+				cli.style.marginTop=Math.random()*600+'px';
+				cli.style.marginLeft=Math.random()*1300+'px';
+			}
+			function move_yes(){
+				document.body.style.backgroundImage='url(img/succes.jpg)';
+				// 隐藏
+				var cli=document.getElementById('a1').style.display='none';
+				var cli=document.getElementById('click').style.display='none';
+				// 去除
+				// var cli=document.getElementById('click');
+				// cli.remove();
+				// var cli=document.getElementById('a1');
+				// cli.remove();
+			}
+		</script>
+	</head>
+	<body id="body1">
+		<a href="javascript:changebj()" id="a1">点击更换主题</a>
+		
+		<div class="click" id="click">
+			<h3>
+				是否想要点击'yes'?<br>
+			</h3>	
+			<input type="button" value="yes" onclick="move_yes()">
+			<input type="button" value="no" onclick="move_no()">
+			
+		</div>
+		
+		
+	</body>
+</html>

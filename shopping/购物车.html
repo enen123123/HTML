@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		
+		
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		
+		<link rel="stylesheet" type="text/css" href="css/jd.css"/>
+		
+		<link rel="stylesheet" type="text/css" href="icon/font_dekvdiccitt/iconfont.css"/>
+		
+		<script type="text/javascript" src="js/jd.js"></script>
+	</head>
+	<body>
+		<!-- start -->
+		<div class="nav">
+			<div class="warp">
+				<ul class="nav_warp_ul">
+					<li><a href=""><img src="icon/房子.png" width="15px"  />京东首页</a></li>
+					<li><a href="">配送到：西安市</a></li>
+				</ul>
+				
+				<ul class="nav_warp_ul_1">
+					<li><a href="">洋洋宝贝</a><span>|</span></li>
+					<li><a href="">我的订单</a><span>|</span></li>
+					<li><a href="">我的京东</a><span>|</span></li>
+					<li><a href="">京东会员</a><span>|</span></li>
+					<li><a href="">企业采购</a><span>|</span></li>
+					<li><a href="">京东手机</a><span>|</span></li>
+					<li><a href="">关注京东</a><span>|</span></li>
+					<li><a href="">客户服务</a><span>|</span></li>
+					<li><a href="">网站导航</a><span>|</span></li>
+				</ul>
+			</div>
+		</div>
+		<!-- end -->
+		
+		<!-- start -->
+		<div class="search">
+			<span class="iconfont">&#xe63d;&#xe62c;<a><font size="6px" color="">购物车</font></a></span>
+			<div class="search_div1">
+				<input type="text" class="search_div1_text" />
+				<input type="button"  value="搜索" class="search_div1_button" />
+			</div>
+		</div>
+		<!-- end -->
+		
+		<!-- start -->
+		<div class="title warp">
+			<h3>全部商品</h3>
+			<div class="">
+				<span>配送到</span>
+				<select name="" id="">
+					<option value="">鄠邑区</option>
+					<option value="">雁塔区</option>
+					<option value="">未央区</option>
+					<option value="">灞桥区</option>
+				</select>
+			</div>
+		</div>
+		<!-- end -->
+		
+		<!-- start -->
+		<div class="tips warp">
+			<ul>
+				<li><input type="checkbox" name="chec" id="all_sec" onclick="all_sec1(this),one_sec1()">全选</li>
+				<li>商品</li>
+				<li>单价</li>
+				<li>数量</li>
+				<li>小计</li>
+				<li>操作</li>
+			</ul>
+		</div>
+		<!-- end -->
+		
+		
+		<!-- start -->
+		<div class="info warp">
+			<ul >
+				<li class="info_li1"><input type="checkbox" name="chec" onclick="one_sec1()"></li>
+				<li class="info_li2"><img src="img/iphone.jpg" width="100px" ></li>
+				<li class="info_li3">Apple iPhone 11 (A2223) 128GB </li>
+				<li class="info_li4">白色</li>
+				<li class="info_li5">4399.00</li>
+				<li class="info_li6">
+					<button onclick="add(this,1),one_sec1()">-</button>
+					<input type="text" value="1" id="shuliang">
+					<button onclick="add(this,2),one_sec1()">+</button>
+				</li>
+				<li class="info_li7">￥4399.00</li>
+				<li class="info_li8">
+					<a href="javascript:void(0)" onclick="mv(this),one_sec1()">删除<br>移除我的关注</a><br>
+					<a href=""></a>
+				</li>
+			</ul>
+		</div>
+		<div class="info warp">	
+			<ul >
+				<li class="info_li1"><input type="checkbox" name="chec" onclick="one_sec1()"></li>
+				<li class="info_li2"><img src="img/tea.jpg" width="100px" ></li>
+				<li class="info_li3">紫砂茶壶大容量家用过滤壶茶壶功夫茶壶茶具</li>
+				<li class="info_li4">棕色、黑色、紫色</li>
+				<li class="info_li5">12.67</li>
+				<li class="info_li6">
+					<button onclick="add(this,1),one_sec1()" >-</button>
+					<input type="text" value="1">
+					<button onclick="add(this,2),one_sec1()" >+</button>
+				</li>
+				<li class="info_li7">￥12.67</li>
+				<li class="info_li8">
+					<!-- 使其不会跳转：href="javascript:void(0)" -->
+					<a href="javascript:void(0)" onclick="mv(this),one_sec1()">删除<br>移除我的关注</a><br>
+					<a href=""></a>
+				</li>
+			</ul>
+		</div>
+		<div class="info warp">	
+			<ul >
+				<li class="info_li1"><input type="checkbox" name="chec" onclick="one_sec1()"></li>
+				<li class="info_li2"><img src="img/thinkbook.png" width="100px" ></li>
+				<li class="info_li3">ThinkPadThinkBook 16+</li>
+				<li class="info_li4">白色</li>
+				<li class="info_li5">5529.00</li>
+				<li class="info_li6">
+					<button onclick="add(this,1),one_sec1()">-</button>
+					<input type="text" value="1" >
+					<button onclick="add(this,2),one_sec1()">+</button>
+				</li>
+				<li class="info_li7">￥5529.00</li>
+				<li class="info_li8">
+					<a href="javascript:void(0)" onclick="mv(this),one_sec1()">删除<br>移除我的关注</a><br>
+					<a href=""></a>
+				</li>
+			</ul>
+		</div>
+		<!-- end -->
+		
+		<!-- start -->
+		<div class="balance warp">
+			
+			<ul class="balance_ul1">
+				<li><input type="checkbox" name="chec" id="all_sec" onclick="all_sec1(this),one_sec1()">全选</li>
+				<li>删除选中的商品</li>
+				<li>移到我的关注</li>
+				<li>清空下柜商品</li>
+			</ul>
+			<ul class="balance_ul2">
+				<li>已选择<span id="sum">0</span>件商品</li>
+				<li>总价<span id="zong">￥0.00</span></li>
+				<li>
+					<button>结算</button>
+				</li>
+			</ul>
+		</div>
+		<!-- end -->
+	</body>
+</html>

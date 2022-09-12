@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			function demo1(){
+				var form=document.getElementById('form')
+				
+				var p=document.createElement('p');
+				p.innerText='照片：';
+				var inp=document.createElement('input');
+				inp.type='file';
+				var inp1=document.createElement('input');
+				inp1.type='button';
+				inp1.value='删除';
+				// 添加节点对象
+				// form.appendChild(p);
+				// p.appendChild(inp);
+				// p.appendChild(inp1);
+				
+				// 另一种添加在某元素之前
+				var last=document.getElementById('last');
+				form.insertBefore(p,last);
+				p.appendChild(inp);
+				p.appendChild(inp1);
+				
+				inp1.onclick=function(){
+					p.removeChild(inp);//移除子节点
+					p.removeChild(inp1);
+					p.remove();//移除本身元素
+					// form.removeChild(p);
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<form id="form">
+			<p>用户名：<input type="text"></p>
+			<p>
+				图片：<input type="file" value="">
+				<input type="button" value="添加" onclick="demo1()">
+			</p>
+			<p id="last">
+				<input type="button" value="提交">
+				<input type="button" value="清空">
+			</p>
+			<p></p>
+		</form>
+	</body>
+</html>
